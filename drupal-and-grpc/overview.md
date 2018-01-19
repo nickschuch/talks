@@ -1,10 +1,10 @@
 Drupal 8 and GRPC
 =================
 
-Our applications are growing! Gone are the days where we manage the entire application in one monolithic application.
+Our applications are growing! Gone are the days where we manage the entire application as one giant monolith.
 
-As Drupal developers, we are constantly getting asked to integrate with different types of APIs. One API type which is
-building in popularity is GRPC.
+As Drupal developers, we are constantly getting asked to integrate with different classes of APIs to support new functionality.
+One API class which is building in popularity is GRPC.
 
 GRPC is a combination of technologies which allows for easier integration between client and server, allowing for less
 "architecting" of how an API should be structured (I'm looking at your REST) and getting on with the the actual
