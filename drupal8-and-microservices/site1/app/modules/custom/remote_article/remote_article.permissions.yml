@@ -1,0 +1,22 @@
+add remote_article entities:
+  title: 'Create new Remote Article entities'
+
+administer remote_article entities:
+  title: 'Administer Remote Article entities'
+  description: 'Allow to access the administration form to configure Remote Article entities.'
+  restrict access: true
+
+delete remote_article entities:
+  title: 'Delete Remote Article entities'
+
+edit remote_article entities:
+  title: 'Edit Remote Article entities'
+
+access remote_article overview:
+  title: 'Access the Remote Article overview page'
+
+view published remote_article entities:
+  title: 'View published Remote Article entities'
+
+view unpublished remote_article entities:
+  title: 'View unpublished Remote Article entities'

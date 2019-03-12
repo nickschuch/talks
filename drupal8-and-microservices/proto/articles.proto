@@ -1,0 +1,55 @@
+syntax = "proto3";
+
+package articles;
+
+service Articles {
+  rpc Create (CreateRequest) returns (CreateResponse) {}
+  rpc Get (GetRequest) returns (GetResponse) {}
+  rpc Update (UpdateRequest) returns (UpdateResponse) {}
+  rpc Delete (DeleteRequest) returns (DeleteResponse) {}
+  rpc List (ListRequest) returns (ListResponse) {}
+}
+
+message CreateRequest {
+	Article article = 1;
+}
+
+message CreateResponse {
+	Article article = 1;
+}
+
+message GetRequest {
+	string id = 1;	
+}
+
+message GetResponse {
+	Article article = 1;
+}
+
+message UpdateRequest {
+	Article article = 1;
+}
+
+message UpdateResponse {
+}
+
+message DeleteRequest {
+	string id = 1;
+}
+
+message DeleteResponse {
+}
+
+message ListRequest {
+	repeated string ids = 1;
+}
+
+message ListResponse {
+	repeated Article articles = 1;
+}
+
+message Article {
+  string id = 1;
+  string title = 2;
+  string body = 3;
+}

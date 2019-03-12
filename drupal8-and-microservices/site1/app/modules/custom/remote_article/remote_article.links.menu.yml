@@ -1,0 +1,7 @@
+# Remote Article menu items definition
+entity.remote_article.collection:
+  title: 'Remote Article list'
+  route_name: entity.remote_article.collection
+  description: 'List Remote Article entities'
+  parent: system.admin_content
+  weight: 100

@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ * Contains remote_article.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_entity_type_alter().
+ */
+function remote_article_entity_type_alter(array &$entity_types) {
+  if (isset($entity_types['remote_article'])) {
+    $entity_types['remote_article']->setStorageClass('Drupal\Core\Entity\KeyValueStore\KeyValueContentEntityStorage');
+    $entity_keys = $entity_types['remote_article']->getKeys();
+    $entity_types['remote_article']->set('entity_keys', $entity_keys + array('uuid' => 'uuid'));
+  }
+}
+
+function remote_article_module_implements_alter(&$implementations, $hook) {
+  if ($hook == 'entity_update') {
+    unset($implementations['editor']);
+  }
+}

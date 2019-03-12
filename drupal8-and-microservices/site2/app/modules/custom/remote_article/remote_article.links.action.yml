@@ -1,0 +1,5 @@
+entity.remote_article.add_form:
+  route_name: entity.remote_article.add_form
+  title: 'Add Remote Article'
+  appears_on:
+    - entity.remote_article.collection

@@ -1,0 +1,8 @@
+version: '2'
+services:
+  presentation:
+    image: nginx
+    volumes:
+      - .:/usr/share/nginx/html
+    ports:
+      - "9000:80"

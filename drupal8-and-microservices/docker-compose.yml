@@ -1,0 +1,47 @@
+version: '2'
+services:
+  api:
+    build: ./api
+    ports:
+      - "8080:8080"
+  # The first site, used to create content.
+  site1:
+    build: ./site1
+    volumes:
+      - ./site1:/data
+    ports:
+      - "8081:80"
+    links:
+      - db1:db
+      - api 
+  db1:
+    image: mariadb
+    environment:
+     - MYSQL_ROOT_PASSWORD=root
+     - MYSQL_DATABASE=local
+     - MYSQL_USER=drupal
+     - MYSQL_PASSWORD=drupal
+  # The second site, used to show content shared from API.
+  site2:
+    build: ./site2
+    volumes:
+      - ./site2:/data
+    ports:
+      - "8082:80"
+    links:
+      - db2:db
+      - api
+  db2:
+    image: mariadb
+    environment:
+     - MYSQL_ROOT_PASSWORD=root
+     - MYSQL_DATABASE=local
+     - MYSQL_USER=drupal
+     - MYSQL_PASSWORD=drupal
+  # These are the slides for presenting the demo, duuhhhhh!
+  slides:
+    image: nginx
+    volumes:
+      - ./slides:/usr/share/nginx/html
+    ports:
+      - "9000:80"

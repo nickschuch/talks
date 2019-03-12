@@ -1,0 +1,60 @@
+{
+    "name": "site1",
+    "description": "Site 1 for my Drupal Gov 2017 demo",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "composer/installers": "~1.0",
+        "cweagans/composer-patches": "~1.5",
+        "drupal-composer/drupal-scaffold": "~2.0",
+        "drupal/core": "~8.2",
+        "drush/drush": "~8.1",
+        "grpc/grpc": "v1.1.4"
+    },
+    "require-dev": {
+        "drupal/coder": "~8.2",
+        "mikey179/vfsStream": "~1.2",
+        "phpunit/phpunit": "~4.8"
+    },
+    "scripts": {
+        "drupal-scaffold": [
+            "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
+        ]
+    },
+    "autoload": {
+        "classmap": [],
+        "psr-4": {
+            "Articles\\": "src//Articles",
+            "GPBMetadata\\": "src//GPBMetadata"
+        }
+    },
+    "config": {
+        "bin-dir": "bin/"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    ],
+    "extra": {
+        "installer-paths": {
+            "app/core": [
+                "drupal/core"
+            ],
+            "app/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "app/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "app/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "drush/contrib/{$name}": [
+                "type:drupal-drush"
+            ]
+        },
+        "enable-patching": true
+    }
+}

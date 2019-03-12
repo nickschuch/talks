@@ -1,0 +1,15 @@
+parameters:
+  factory.keyvalue:
+    entity_storage__remote_article: remote_article.api
+  remote_article.uri: 'api:8080'
+  remote_article.insecure: true
+services:
+  remote_article.api:
+    class: Drupal\remote_article\Entity\RemoteArticleStore\RemoteArticleEntityKeyValueFactory
+    arguments: ['@remote_article.client']
+  remote_article.client:
+    class: Articles\ArticlesClient
+    factory: remote_article.client_factory:get
+    arguments: ['%remote_article.uri%', '%remote_article.insecure%']
+  remote_article.client_factory:
+    class: Drupal\remote_article\Entity\RemoteArticleStore\RemoteArticleClientFactory
