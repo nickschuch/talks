@@ -12,9 +12,9 @@ Nick Schuch worked on the DrupalCI community initiatvie to migrate the Drupal pr
 
 ## Videos
 
-DrupalSouth 2017 - Sailing with Kubernetes and Drupal 8 - https://www.youtube.com/watch?v=kA63JML3LAk
-DrupalSouth 2016 - Drupal 8 and Microservices -https://www.youtube.com/watch?v=mf1aq79sx1I
-DrupalSouth 2015 - The DrupalCI initiative - https://www.youtube.com/watch?v=aRuCzW23QRc
+* DrupalSouth 2017 - Sailing with Kubernetes and Drupal 8 - https://www.youtube.com/watch?v=kA63JML3LAk
+* DrupalSouth 2016 - Drupal 8 and Microservices -https://www.youtube.com/watch?v=mf1aq79sx1I
+* DrupalSouth 2015 - The DrupalCI initiative - https://www.youtube.com/watch?v=aRuCzW23QRc
 
 ## Links
 
