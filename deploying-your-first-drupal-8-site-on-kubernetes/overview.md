@@ -1,5 +1,5 @@
-Deploying your first Drupal 8 site on Kubernetes
-================================================
+Deploying Drupal on Kubernetes
+==============================
 
 Kubernetes has taken the world by storm and brought forth a new paradym for application development.
 
