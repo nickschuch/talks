@@ -9,6 +9,6 @@ It had been a long road, but it's not over...
 
 Those dragons are back! Welcome to Day 2.
 
-This is talk for the Day 2 operators who want to hear war stories about what it's like to run Kubernetes in production for 3 years.
+This is talk for the Day 2 operators who want to hear war stories about what it's like to run Kubernetes in production for 4 years.
 
 This talk is also for the Day 2 operator who want to know where the Cloud Native community is heading next and how it related to Drupal.
