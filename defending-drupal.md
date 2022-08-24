@@ -1,5 +1,5 @@
-How to Defend Drupal
-====================
+Defending Drupal
+================
 
 Defending Drupal from malicious actors is difficult since it requires a deep knowledge of the application,
 hosting platform and development cycle, all of which are rapidly evolving with the Cloud Native landscape.
